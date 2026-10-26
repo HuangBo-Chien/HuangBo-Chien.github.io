@@ -1,0 +1,98 @@
+# Minimal Mistakes 遠端主題（GitHub Pages 原生支援：push Markdown 即部署，免本地 Ruby）
+remote_theme: "mmistakes/minimal-mistakes@4.28.1"
+minimal_mistakes_skin: "dark" # 可選: "default", "air", "aqua", "contrast", "dirt", "neon", "mint", "plum", "sunrise", "catppuccin_mocha"
+
+# 網站基本設定
+locale: "zh-TW"
+title: "Huang Bo-Chien 的部落格"
+title_separator: "|"
+subtitle: "Vibe Coding 記錄"
+name: "Huang Bo-Chien"
+description: "Vibe coding 做過的各種雜七雜八的東西：LF2 bot、逆向工程、強化學習，與各種實驗記錄。"
+url: "https://huangbo-chien.github.io"
+baseurl: ""
+repository: "HuangBo-Chien/HuangBo-Chien.github.io" # giscus 留言系統的 repo 來源
+timezone: "Asia/Taipei"
+
+# 留言系統（giscus，資料存在本 repo 的 Discussions）
+# 前提：已安裝 giscus App（https://github.com/apps/giscus）
+comments:
+  provider: "giscus"
+  giscus:
+    repo_id: "R_kgDOVXi6_g"
+    category_name: "Announcements"
+    category_id: "DIC_kwDOVXi6_s4DJonn"
+    discussion_term: "pathname" # 每篇文章依路徑對應一則 discussion
+    reactions_enabled: "1"
+    theme: "dark_dimmed"
+    input_position: "bottom"
+    lang: "zh-TW"
+    lazy: true
+
+# 站內搜尋（用文章列表頁上方的搜尋圖示）
+search: true
+
+# 側欄與頁尾作者資訊
+author:
+  name: "Huang Bo-Chien"
+  bio: "Vibe coding 玩家，用 AI 把腦中奇怪的想法做成各種東西。"
+  location: "Taiwan"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/HuangBo-Chien"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/HuangBo-Chien"
+
+# 檔案讀取
+include:
+  - _pages
+
+# 只用 GitHub Pages 白名單內的插件，保證原生 build 會過
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-include-cache
+
+# 輸出
+permalink: /:year/:month/:day/:title/
+paginate: 10 # 首頁每頁幾篇文章
+paginate_path: /page:num/
+
+# 分類／標籤歸檔頁（liquid 模式，GitHub Pages 相容）
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# Markdown
+kramdown:
+  input: GFM
+
+# 頁面預設 layout
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
