@@ -1,6 +1,6 @@
 ---
 title: "用 CDP 逆向 Little Fighter 2 Remastered：打造 RL 訓練環境的實錄（上）"
-date: 2026-10-26 15:00:00 +0800
+date: 2026-10-26 12:30:00 +0800
 categories: [LF2]
 tags: [逆向工程, CDP, 強化學習, Python]
 ---
